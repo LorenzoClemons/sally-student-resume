@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="application-root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    // Code will go here
+        const appRoot = document.querySelector('#application-root')
+        //const helloWorldH1 = React.createElement('h1', null, 'Hello, world!');
+      //   const helloWorldH1 = <h1>Hello, world!</h1>
+      //   const multipleElements = <div>
+      //   <h1>Hello, world!</h1>
+      //   <p>How are you today?</p>
+      //   <h2>Look what React can do!</h2>
+      // </div>
+      function App(props) {
+        console.log(props)
+  return ( 
+    <span id="app-id" className={props.className}>
+    <header>
+    {props.children}
+    </header>
+    </span>
+    );
+}
+
+ReactDOM.render(
+  <App className="new-class-name">
+    <h1>Current Page Title</h1> ,
+  </App>,
+  appRoot
+);
+
+
+  
+    </script>
+</body>
+<!-- <body>
+    <div id="application-root"></div>
+  <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  <script type="text/babel">
+    ReactDOM.render(
+      <div>
+        <h1>Hello, world!</h1>
+        <p>How are you today?</p>
+        <h2>Look what React can do!</h2>
+      </div>,
+      document.querySelector('#application-root')
+    );
+  </script>
+  </body> -->
+
+</html>
